@@ -58,6 +58,34 @@
   #navbar-toggle:hover {
     color: rgba(255, 255, 255, 1);
   }
+
+  .div-wanna {
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    background-image: url("img/code.jpeg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 40%;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.text-wanna {
+    text-align: center;
+    height: 300px;
+    display: table-cell;
+    padding-top: 2em;
+    color: white;
+}
+.wanna {
+  font-size: 1.5em;
+}
+
+.dev {
+  font-size: 2em;
+}
   
   @media screen and (min-width: 768px) {
   
@@ -90,6 +118,22 @@
   
     #navbar-toggle {
       display: none;
+    }
+
+    .div-wanna {
+      background-size: 100% auto;
+    }
+
+    .text-wanna {
+      vertical-align: middle;
+    }
+
+    .wanna {
+      font-size: 3em;
+    }
+    
+    .dev {
+      font-size: 4em;
     }
   
 } 
