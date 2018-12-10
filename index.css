@@ -69,7 +69,7 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 40%;
+    background-size: 100% 100%;
     display: table;
     width: 100%;
     height: 100%;
@@ -121,6 +121,54 @@
 footer {
   text-align: center;
   padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black /*rgba(255, 255, 255, 1) */ ;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  display: block;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+ul li ul {
+  visibility: hidden;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+  background-color: antiquewhite;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul, /* this is the line we add */
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+
+.dropdown a:hover {
+  text-shadow: 4px 2px 8px #888888;
+  font-size: 17px;
+}
+
+ul li ul li {
+clear: both;
+width: 100%;
 }
 
   @media screen and (min-width: 768px) {
@@ -186,51 +234,5 @@ footer {
       padding: 25px;
     }
 
-    a {
-      text-decoration: none;
-      color: black /*rgba(255, 255, 255, 1) */ ;
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
-    }
-
-    li {
-      display: block;
-      padding: 1rem;
-      position: relative;
-      text-decoration: none;
-      transition-duration: 0.5s;
-    }
     
-    ul li ul {
-      visibility: hidden;
-      min-width: 5rem;
-      position: absolute;
-      transition: all 0.5s ease;
-      margin-top: 1rem;
-      left: 0;
-      display: none;
-      background-color: antiquewhite;
-    }
-  
-    ul li:hover > ul,
-    ul li:focus-within > ul, /* this is the line we add */
-    ul li ul:hover {
-      visibility: visible;
-      opacity: 1;
-      display: block;
-    }
-
-   
-    .dropdown a:hover {
-      text-shadow: 4px 2px 8px #888888;
-      font-size: 17px;
-    }
-  
-  ul li ul li {
-    clear: both;
-    width: 100%;
-  }
 } 
